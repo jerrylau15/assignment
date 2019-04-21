@@ -144,7 +144,7 @@ class Contact(Model):
 class Movie(Model):
     id = Column(Integer, primary_key=True)
     photo = Column(ImageColumn(size=(500, 500, True), thumbnail_size=(30, 30, True)))
-    name = Column(String(150), unique=False, nullable=False)
+    name = Column(String(150), unique=True, nullable=False)
     Type = Column(String(100), nullable=False)
     rating = Column(String(10))
     opening = Column(Date)
@@ -184,7 +184,7 @@ class Movie(Model):
 class EventGroup(Model):
     id = Column(Integer, primary_key=True)
     Type = Column(String(100), nullable=False)
-    name = Column(String(150), unique=False, nullable=False)
+    name = Column(String(150), unique=True, nullable=False)
 
     def __repr__(self):
         return self.name
