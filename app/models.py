@@ -149,7 +149,7 @@ class Movie(Model):
     rating = Column(String(10))
     opening = Column(Date)
     time = Column(String(20))
-    subtitle = Column(String(50))
+    subtitle = Column(String(100))
     synopsis = Column(Text())
     cinema = Column(String(200))
     Director = Column(String(30))
