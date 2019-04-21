@@ -1,0 +1,93 @@
+<!-- extend base layout -->
+{% extends "index_base.html" %}
+
+{% block head_css %}
+{{ super() }}
+<link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1>Location</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3687.58761593441!2d114.0336104!3d22.4445422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f0a89978e319%3A0x83d62806ebe47154!2sYOHO+MALL+I!5e0!3m2!1sen!2shk!4v1555606988829!5m2!1sen!2shk"
+                width="1000" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    </div>
+    <div class="fb-page"
+         data-href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+         data-tabs="timeline, events, messages" data-width="500" data-height="800" data-small-header="false"
+         data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote
+                cite="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+                class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE">Broadway/
+            PALACE/ AMC</a></blockquote>
+    </div>
+    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo">Show More</button>
+    <div id="demo" class="collapse">
+        <h1>MY CINEMA YOHO MALL</h1>
+        Simply the best immersive movie experience in the world. Seeing really is believing when it comes to IMAX and
+        every seat literally is “the best seat in the house”.
+        <br>
+        <br>
+        The New Territories West has welcomed its very first IMAX Hong Kong cinema! Situated within the trendy Yuen Long
+        YOHO Mall, the IMAX cinema has already garnered rave reviews in the short time since it opened in mid-2017.
+        Designed with younger audiences in mind, the “My Cinema” brand delivers excitement and quality in abundance. The
+        cinema occupies 55,000 square feet, and is outfitted with 7 cinemas and up to 1,243 comfy house seats. Our proud
+        new cinema features bold new concepts, amenities and not mention - the most advanced audio and visual technology
+        on the market today.
+        <br>
+        <br>
+        The IMAX HK cinema boasts the most spacious seats and legroom, making it the most comfortable IMAX cinema in
+        Hong Kong. The auditorium –style cinema layout also provides an unobstructed view from all angles for maximum
+        pleasure. Also, the installation of premium vibrating seats heightens viewing sensation across all movie genres
+        and formats, not just IMAX. To suit the personal preferences of audiences, these seats are installed every other
+        row for a more tailor-made experience.
+        <br>
+        <br>
+        What’s more, the IMAX HK cinema employs the latest RealD Precision White Screens and 4K Laser projectors, which
+        significantly enhances the efficiency of projection brightness and provides astonishingly sharp imagery. The
+        cinema is the first in Hong Kong to deploy 4K laser projectors across all its house cinemas, an arrangement that
+        will surely suit the market’s future needs. The cinema is also outfitted with the advanced DTS:X surround sound
+        system, providing 360-degrees powerful digital surround sound for a surreal cinematic experience.
+        <br>
+        <br>
+        Packing the latest technology with a bold and unique design, the My Cinema IMAX movie experience is definitely
+        one not to be missed!
+    </div>
+    <footer class="mojFooter">
+        <font face="Roboto Condensed" size="4">
+            <center>
+                <div class="container">
+                    <div class="bottom-footer">
+                        <div class="col-md-12">
+                            <ul class="footer-nav list-unstyled list-inline">
+                                <h4>Follow Us</h4>
+                                <a href="https://www.facebook.com/page.Broadway.PALACE.AMC"> <i
+                                        class="fa fa-facebook-square fa-2x"></i></a>
+                                <a href="https://www.youtube.com/user/BwayPalaceAmc"> <i
+                                        class="fa fa-youtube-play fa-2x"></i></a>
+                                <a href="https://www.instagram.com/broadway.palace.amc/"> <i
+                                        class="fa fa-instagram fa-2x"></i></a>
+                                <br>
+                                <br>
+                                <h4>Mobile Apps</h4>
+                                <a href="https://play.google.com/store/apps/details?id=gd.com.client.broadway&feature=search_result&hl=en">
+                                    <i class="fa fa-android fa-2x"></i></a>
+                                <a href="https://itunes.apple.com/hk/app/ticketing-broadway-palace/id403690922?mt=8"> <i
+                                        class="fa fa-apple fa-2x"></i></a>
+                            </ul>
+                            <li><a href="advertisewithus.html">Advertise With Us</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2019 Cinema.com.hk Limited.</p>
+                </div>
+        </font> </center>
+    </footer>
+</div>
+{% endblock %}

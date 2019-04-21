@@ -2,146 +2,247 @@
 {% extends "index_base.html" %}
 
 {% block head_css %}
-        {{ super() }}
-        <link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+{{ super() }}
+<link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 
+<div class="container">
+  <h2>Rounded Corners</h2>
+  <p>The .rounded class adds rounded corners to an image:</p>
+  <img src="static/img/MMC1.jpg" class="rounded" alt="Cinque Terre" width="304" height="236">
+</div>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-       <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
-       <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <div class="jumbotron" style="background: url('static/img/slide1.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
-            <div class="container">
-            <h1><i class="fa fa-desktop"></i> Flask App Builder</h1>
-            <p>{{_("Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts and much more.")}}</p>
-            <center>
-            <p><a class="btn btn-primary btn-lg" href="https://github.com/dpgaspar/Flask-AppBuilder"
-                 role="button">{{_("Star it")}} <i class="fa fa-star"></i></a></p>
-            </center>
-            </div>
-           </div>
-        </div>
-
-        <div class="item">
-            <div class="jumbotron" style="background: url('static/img/slide2.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
-            <div class="container">
-            <h1><i class="fa fa-github"></i> {{_("Free and Open Source")}}</h1>
-                <p>{{_("Use it any way you like, it's free to use. Feel free to contribute, post questions, propose new features, report bugs. You can browse the code freely on github.")}}</p>
-            <center>
-                <p><a class="btn btn-primary btn-lg" href="https://github.com/dpgaspar/Flask-AppBuilder/issues" role="button">{{_("Issues")}} &raquo;</a></p>
-            </center>
-            </div>
+            <div class="jumbotron"
+                 style="background: url('static/img/MMC1.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container">
+                    <h1><i class="fa fa-desktop"></i> Flask App Builder</h1>
+                    <p>{{_("Simple and rapid application development framework, built on top of Flask. includes detailed
+                        security, auto CRUD generation for your models, google charts and much more.")}}</p>
+                    <center>
+                        <p><a class="btn btn-primary btn-lg" href="https://github.com/dpgaspar/Flask-AppBuilder"
+                              role="button">{{_("Star it")}} <i class="fa fa-star"></i></a></p>
+                    </center>
+                </div>
             </div>
         </div>
-
         <div class="item">
-            <div class="jumbotron" style="background: url('static/img/slide3.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
-            <div class="container">
-            <h1><i class="fa fa-book"></i> {{_("Documentation")}}</h1>
-            <p>{{_("Every feature is documented with examples. API documentation is automatically generated from commented code.")}}</p>
-            <center>
-            <p><a class="btn btn-primary btn-lg" href="http://flask-appbuilder.readthedocs.org/en/latest/" role="button">{{_("Documentation")}} &raquo;</a></p>
-            </center>
-            </div>
+            <div class="jumbotron"
+                 style="background: url('static/img/MMC2.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container">
+                    <h1><i class="fa fa-github"></i> {{_("Free and Open Source")}}</h1>
+                    <p>{{_("Use it any way you like, it's free to use. Feel free to contribute, post questions, propose
+                        new features, report bugs. You can browse the code freely on github.")}}</p>
+                    <center>
+                        <p><a class="btn btn-primary btn-lg" href="https://github.com/dpgaspar/Flask-AppBuilder/issues"
+                              role="button">{{_("Issues")}} &raquo;</a></p>
+                    </center>
+                </div>
             </div>
         </div>
 
         <div class="item">
-            <div class="jumbotron" style="background: url('static/img/slide4.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
-            <div class="container">
-            <h1><i class="fa fa-play"></i> {{_("Live Demo")}}</h1>
-            <p>{{_("Login and get a hold on the quick how to example, with a simple contacts app. This will show the basic features of the framework. Feel free to login using user 'guest' password 'welcome'")}}</p>
-            <center>
-            <p><a class="btn btn-primary btn-lg"  href="login" role="button">{{_("Login")}} &raquo;</a></p>
-            </center>
-            </div>
+            <div class="jumbotron"
+                 style="background: url('static/img/MMC3.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container">
+                    <h1><i class="fa fa-book"></i> {{_("Documentation")}}</h1>
+                    <p>{{_("Every feature is documented with examples. API documentation is automatically generated from
+                        commented code.")}}</p>
+                    <center>
+                        <p><a class="btn btn-primary btn-lg" href="http://flask-appbuilder.readthedocs.org/en/latest/"
+                              role="button">{{_("Documentation")}} &raquo;</a></p>
+                    </center>
+                </div>
             </div>
         </div>
-</div>
+
+        <div class="item">
+            <div class="jumbotron"
+                 style="background: url('static/img/MMC4.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container">
+                    <h1><i class="fa fa-play"></i> {{_("Live Demo")}}</h1>
+                    <p>{{_("Login and get a hold on the quick how to example, with a simple contacts app. This will show
+                        the basic features of the framework. Feel free to login using user 'guest' password
+                        'welcome'")}}</p>
+                    <center>
+                        <p><a class="btn btn-primary btn-lg" href="login" role="button">{{_("Login")}} &raquo;</a></p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
 
 </div>
 
-      <div class="row" style="background:url('static/img/polaroid.png')">
-        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
-          <h2 class="featurette-heading">{{_("Super fast development ")}}<span class="text-muted">{{_(" Highly customizable")}}</span></h2>
-            <ul>
-          <li class="lead tight">{{_("Automatic menu generation.")}}</li>
-        <li class="lead tight">{{_("Automatic CRUD generation.")}}</li>
-        <li class="lead tight">{{_("Multiple actions on db records.")}}</li>
-        <li class="lead tight">{{_("Big variety of filters for your lists.")}}</li>
-        <li class="lead tight">{{_("Various view widgets: lists, master-detail, list of thumbnails etc")}}</li>
-        <li class="lead tight">{{_("Select2, Datepicker, DateTimePicker")}}</li>
-        <li class="lead tight">{{_("Google charts with automatic group by or direct values and filters.")}}</li>
-                </ul>
-        </div>
-        <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
-          <h1><i class="fa fa-bolt fa-5x"></i></h1>
-        </div>
-      </div>
+<div class="row" style="background:url('static/img/polaroid.png')">
+    <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+        <h2 class="featurette-heading">{{_("Super fast development ")}}<span class="text-muted">{{_(" Highly customizable")}}</span>
+        </h2>
+        <ul>
+            <li class="lead tight">{{_("Automatic menu generation.")}}</li>
+            <li class="lead tight">{{_("Automatic CRUD generation.")}}</li>
+            <li class="lead tight">{{_("Multiple actions on db records.")}}</li>
+            <li class="lead tight">{{_("Big variety of filters for your lists.")}}</li>
+            <li class="lead tight">{{_("Various view widgets: lists, master-detail, list of thumbnails etc")}}</li>
+            <li class="lead tight">{{_("Select2, Datepicker, DateTimePicker")}}</li>
+            <li class="lead tight">{{_("Google charts with automatic group by or direct values and filters.")}}</li>
+        </ul>
+    </div>
+    <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
+        <h1><i class="fa fa-bolt fa-5x"></i></h1>
+    </div>
+</div>
 
-      <div class="row" style="background:url('static/img/fabric_1.png')">
-          <div class="col-md-3 col-md-offset-1 col-xs-offset-1 ">
-           <h1><i class="fa fa-lock fa-5x"></i></h1>
-          </div>
-          <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
-            <h2 class="featurette-heading">{{_("Ready to go Security ")}}<span class="text-muted">{{_(" Fully granular")}}</span></h2>
-          <ul>
+<div class="row" style="background:url('static/img/fabric_1.png')">
+    <div class="col-md-3 col-md-offset-1 col-xs-offset-1 ">
+        <h1><i class="fa fa-lock fa-5x"></i></h1>
+    </div>
+    <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+        <h2 class="featurette-heading">{{_("Ready to go Security ")}}<span
+                class="text-muted">{{_(" Fully granular")}}</span></h2>
+        <ul>
             <li class="lead tight">{{_("Automatic permissions lookup, based on exposed methods.")}}</li>
-            <li class="lead tight">{{_("Inserts on the Database all the detailed permissions possible on your application.")}}</li>
+            <li class="lead tight">{{_("Inserts on the Database all the detailed permissions possible on your
+                application.")}}
+            </li>
             <li class="lead tight">{{_("Public (no authentication needed) and Private permissions.")}}</li>
             <li class="lead tight">{{_("Role based permissions.")}}</li>
             <li class="lead tight">{{_("Authentication support for OpenID, Database and LDAP.")}}</li>
             <li class="lead tight">{{_("Support for self user registration.")}}</li>
-          </ul>
-        </div>
-      </div>
+        </ul>
+    </div>
+</div>
 
-      <div class="row featurette" style="background:url('static/img/old_moon.png')">
-        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
-          <h2 class="featurette-heading">{{_("Form Generation ")}}<span class="text-muted">{{_(" With full control")}}</span></h2>
+<div class="row featurette" style="background:url('static/img/old_moon.png')">
+    <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+        <h2 class="featurette-heading">{{_("Form Generation ")}}<span
+                class="text-muted">{{_(" With full control")}}</span></h2>
         <ul>
             <li class="lead tight">{{_("Automatic, Add, Edit and Show from Database Models.")}}</li>
             <li class="lead tight">{{_("Labels and descriptions for each field.")}}</li>
             <li class="lead tight">{{_("Automatic base validators from model's definition.")}}</li>
-            <li class="lead tight">{{_("Custom validators, extra fields, custom filters for related dropdown lists.")}}</li>
+            <li class="lead tight">{{_("Custom validators, extra fields, custom filters for related dropdown
+                lists.")}}
+            </li>
             <li class="lead tight">{{_("Image and File support for upload and database field association")}}</li>
             <li class="lead tight">{{_("Field sets for Form's (Django style).")}}</li>
         </ul>
-        </div>
-        <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
-          <h1><i class="fa fa-list-alt fa-5x"></i></h1>
-        </div>
-      </div>
+    </div>
+    <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
+        <h1><i class="fa fa-list-alt fa-5x"></i></h1>
+    </div>
+</div>
 
-       <div class="row" style="background:url('static/img/green_cup.png')">
-          <div class="col-md-3 col-md-offset-1 col-xs-offset-1">
-           <h1><i class="fa fa-cog fa-5x"></i></h1>
-          </div>
-          <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
-            <h2 class="featurette-heading">{{_("Multi Language Support ")}}<span class="text-muted">{{_(" and more")}}</span></h2>
-          <ul>
+<div class="row" style="background:url('static/img/green_cup.png')">
+    <div class="col-md-3 col-md-offset-1 col-xs-offset-1">
+        <h1><i class="fa fa-cog fa-5x"></i></h1>
+    </div>
+    <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+        <h2 class="featurette-heading">{{_("Multi Language Support ")}}<span
+                class="text-muted">{{_(" and more")}}</span></h2>
+        <ul>
             <li class="lead tight">{{_("Framework translations and your app translations merge.")}}</li>
             <li class="lead tight">{{_("Bootstrap.")}}</li>
             <li class="lead tight">{{_("Font Awesome Icons.")}}</li>
             <li class="lead tight">{{_("Select2, Date Picker.")}}</li>
-          </ul>
-        </div>
-      </div>
+        </ul>
+    </div>
+</div>
 
-{% endblock %}
+<div class="container">
+    <div class="row">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    </div>
+    <div class="fb-page"
+         data-href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+         data-tabs="timeline, events, messages" data-width="500" data-height="800" data-small-header="false"
+         data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote
+                cite="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+                class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE">Broadway/
+            PALACE/ AMC</a></blockquote>
+    </div>
+    <div class="container">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Show More</button>
+    <div id="demo" class="collapse">
+        <h1>Broadway Cinema</h1>
+        Broadway Circuit is currently the largest cinema circuit in Hong Kong, with many movie theaters across Hong Kong
+        Island, Kowloon and the New Territories. Our sizable network of state-of-the-art movie theaters charm discerning
+        moviegoers with their uniqueness, as each movie theater features a different design theme, making them always a
+        joy to visit. Also, all Broadway Circuit movie theaters are meticulously equipped with the most advanced digital
+        visual and audio technology, ensuring a both thrilling and premium movie Hong Kong experience for audiences.
+        <br>
+        <br>
+        The name “Broadway” symbolizes the historical birthplace of many famous art shows and performances, such as
+        movies, musicals, dramas, operas and dances, which all brought joy and excitement to countless audiences. First
+        established in 1950, the Broadway Circuit has been at the forefront of the Hong Kong movie scene for many
+        decades. After showing plenty of unforgettable titles in Hong Kong movie history, our iconic and much-loved
+        cinema location on Sai Yeung Choi Street, Mong Kok was comprehensively rebuilt in 1987. Since then, our cinema
+        circuit has steadily grown to become the leader in our industry, and we currently operate a total of 13 movie
+        theaters in Hong Kong, with 70 movie screens and over 10,000 house seats. To satisfy a wide range of audiences,
+        we currently manage 4 movie theater brands: “Broadway”, “My Cinema”, “Palace” and “MOViE MOViE”, each offering a
+        distinct viewing experience for moviegoers.
+        <br>
+        <br>
+        Other than a wide variety of mainstream movies and big-budget blockbusters, Broadway Circuit also offers a large
+        collection of art house gems and delightful programs from around the world. No matter their tastes or interests,
+        there is always something for every moviegoer at Broadway Circuit.
+        <br>
+        <br>
+        Stay tuned to our official website for the latest movie news, share your thoughts in our movie discussion
+        section, or conveniently purchase movie tickets online.
+    </div>
+
+    <footer class="mojFooter">
+        <font face="Roboto Condensed" size="4">
+            <center>
+                <div class="container">
+                    <div class="bottom-footer">
+                        <div class="col-md-12">
+                            <ul class="footer-nav list-unstyled list-inline">
+                                <h4>Follow Us</h4>
+                                <a href="https://www.facebook.com/page.Broadway.PALACE.AMC"> <i
+                                        class="fa fa-facebook-square fa-2x"></i></a>
+                                <a href="https://www.youtube.com/user/BwayPalaceAmc"> <i
+                                        class="fa fa-youtube-play fa-2x"></i></a>
+                                <a href="https://www.instagram.com/broadway.palace.amc/"> <i
+                                        class="fa fa-instagram fa-2x"></i></a>
+                                <br>
+                                <br>
+                                <h4>Mobile Apps</h4>
+                                <a href="https://play.google.com/store/apps/details?id=gd.com.client.broadway&feature=search_result&hl=en">
+                                    <i class="fa fa-android fa-2x"></i></a>
+                                <a href="https://itunes.apple.com/hk/app/ticketing-broadway-palace/id403690922?mt=8"> <i
+                                        class="fa fa-apple fa-2x"></i></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2019 Cinema.com.hk Limited.</p>
+                </div>
+        </font> </center>
+    </footer>
+    {% endblock %}

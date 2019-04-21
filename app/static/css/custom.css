@@ -4,10 +4,15 @@ li.tight {
 }
 
 .navbar-inverse {
-    background-color: crimson;
-    border-color: crimson;
+    background-color: dark;
+    border-top: 6px solid crimson;
 }
 
-.navbar-brand a{
+.navbar-brand a {
     color: #FFFFFF;
+}
+
+.jumbotron {
+    min-height: 300px;
+    background-size: cover;
 }

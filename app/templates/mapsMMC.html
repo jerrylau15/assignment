@@ -1,0 +1,152 @@
+<!-- extend base layout -->
+{% extends "index_base.html" %}
+
+{% block head_css %}
+{{ super() }}
+<link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active ">
+            <div class="jumbotron jumbotron-fluid"
+                 style="background: url('https://www.techritual.com/wp-content/uploads/2018/01/asd-horz.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container-fluid text-danger ">
+                    <h1> MOViE MOViE Cityplaza</h1>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="jumbotron jumbotron-fluid"
+                 style="background: url('https://www.cinema.com.hk/cmsimg/cinweb/misc/misc_bar_res_20_1542604048.jpg');background-size: 100% 100%;background-repeat: no-repeat;background">
+                <div class="container-fluid text-danger">
+                    <h1> {{_("Wine Bar")}}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron jumbotron-fluid"
+                 style="background: url('https://www.techritual.com/wp-content/uploads/2018/01/asd-horz.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container-fluid text-danger">
+                    <h1> {{_("MOViE MOViE Cityplaza")}}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron jumbotron-fluid"
+                 style="background: url('https://cdn.hk01.com/di/media/images/1297688/org/b99d1a8deb4d734701e5d2af02b2c155.jpeg/LpMV5n0tyHeMMYCCEkB_vBVtmfxXglOW6XR1oel0daE?v=w1920');background-size: 100% 100%;background-repeat: no-repeat;">
+                <div class="container-fluid text-danger">
+                    <h1> {{_("MOViE MOViE Cityplaza")}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1>Location</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7991475304984!2d114.21501111495448!3d22.28559698533122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401736c6914e5%3A0xaad9b80d58022a6f!2sMOViE+MOViE+Cityplaza!5e0!3m2!1sen!2shk!4v1555582495851!5m2!1sen!2shk"
+                width="1000" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    </div>
+    <div class="fb-page"
+         data-href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+         data-tabs="timeline, events, messages" data-width="500" data-height="800" data-small-header="false"
+         data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote
+                cite="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+                class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE">Broadway/
+            PALACE/ AMC</a></blockquote>
+    </div>
+    <div class="container">
+    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo">Show More</button>
+    <div id="demo" class="collapse">
+        <h1>MOViE MOViE Cityplaza</h1>
+        The first cinema concept in Hong Kong that features culture and lifestyle. Get the ultimate theatrical
+        experience and live movies with us!
+        <br>
+        <br>
+        Broadway Circuit is proud to announce the opening of our ground-breaking MOViE MOViE Cityplaza location in 2018.
+        The cinema is the first of its kind to feature “culture” and “lifestyle” as major design elements. Our new
+        cinema boasts 980 seats in 7 auditoriums, and aims to create a cozy, all-inclusive, dine in cinema for
+        moviegoers. Inheriting the spirit of Broadway Cinematheque, there will always be something for everyone as MOViE
+        MOViE Cityplaza will present an extensive programme of masterpieces ranging from award-winning blockbusters to
+        renowned film-festival selections. The interior of the cinema has aesthetically-pleasing interior design, with
+        exhibition spaces for art, history and multimedia that promote audience interaction.
+        <br>
+        <br>
+        At MOViE MOViE Cityplaza, 2 auditoriums are Atmos cinemas, or Atmos House, that boasts advanced sound systems.
+        At the new VIP House, moviegoers can even share every important movie moment with 16 friends and family through
+        MM Moments.
+        <br>
+        <br>
+        Premium vibrating seats are available across all our auditoriums (except the VIP House), which surely help
+        provide a stimulating movie experience for the audience. In terms of visual technology, the cutting-edge RealD
+        Ultimate Screen technology enhances picture brightness efficiency by 80%, making screens appear bigger. It has
+        the industry’s highest stereo contrast ratio and Nano-perforations eliminate ghosting and speckles. This coupled
+        with the advanced 4K Laser Projection, Broadway Circuit promises a theatrical experience like no other at MOViE
+        MOViE Cityplaza.
+        <br>
+        <br>
+        At the pinnacle of our offerings, the MOViEMAXX auditorium has 270 seats and deploys 40LHC high contrast 4K
+        laser projector, delivering a native contrast ratio of 6,000:1 for some truly refined and spectacular imagery.
+        Also, the revolutionary AuroMax 3D sound system also delivers a concentrated and layered, yet delightfully
+        natural sound spread.
+    </div>
+    <footer class="mojFooter">
+        <font face="Roboto Condensed" size="4">
+            <center>
+                <div class="container">
+                    <div class="bottom-footer">
+                        <div class="col-md-12">
+                            <ul class="footer-nav list-unstyled list-inline">
+                                <h4>Follow Us</h4>
+                                <a href="https://www.facebook.com/page.Broadway.PALACE.AMC"> <i
+                                        class="fa fa-facebook-square fa-2x"></i></a>
+                                <a href="https://www.youtube.com/user/BwayPalaceAmc"> <i
+                                        class="fa fa-youtube-play fa-2x"></i></a>
+                                <a href="https://www.instagram.com/broadway.palace.amc/"> <i
+                                        class="fa fa-instagram fa-2x"></i></a>
+                                <br>
+                                <br>
+                                <h4>Mobile Apps</h4>
+                                <a href="https://play.google.com/store/apps/details?id=gd.com.client.broadway&feature=search_result&hl=en">
+                                    <i class="fa fa-android fa-2x"></i></a>
+                                <a href="https://itunes.apple.com/hk/app/ticketing-broadway-palace/id403690922?mt=8"> <i
+                                        class="fa fa-apple fa-2x"></i></a>
+                            </ul>
+                            <li><a href="advertisewithus.html">Advertise With Us</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2019 Cinema.com.hk Limited.</p>
+                </div>
+        </font> </center>
+    </footer>
+    {% endblock %}

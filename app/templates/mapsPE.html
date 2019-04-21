@@ -1,0 +1,94 @@
+<!-- extend base layout -->
+{% extends "index_base.html" %}
+
+{% block head_css %}
+{{ super() }}
+<link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1>Location</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3125543813594!2d114.1606575136756!3d22.3040161483992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401ac192abbf7%3A0x208aaa791e8aa93a!2sPremiere+Cinemas!5e0!3m2!1sen!2shk!4v1555594316690!5m2!1sen!2shk"
+                width="1000" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    </div>
+    <div class="fb-page"
+         data-href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+         data-tabs="timeline, events, messages" data-width="500" data-height="800" data-small-header="false"
+         data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote
+                cite="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE"
+                class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/page.Broadway.PALACE.AMC/?ref=nf&amp;hc_ref=ARQIHuDm-OzEYaf0Z_KwCo8duu0v_U_NGQ8Qm-tCzUM7dn7EQ-FfyVnylTBraxrC2CE">Broadway/
+            PALACE/ AMC</a></blockquote>
+    </div>
+    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo">Show More</button>
+    <div id="demo" class="collapse">
+        <h1>PREMIERE ELEMENTS</h1>
+        A brand new Elements cinema - PREMIERE, has been unveiled at the upscale landmark and shopping mall in March
+        2019.
+        <br>
+        <br>
+        The high-end cinema boasts 12 cinema houses in total, of which 2 are equipped with the Dolby ATMOS 3D sound
+        system, 1 of which is further topped up with a giant viewing screen, while the other was specially-designed as a
+        VIP house. At the moment, the cinema holds the grand title as the cinema with the most viewing houses in Hong
+        Kong, featuring 1,600 comfy and spacious seats. The unique set up is tailormade for our viewers to enjoy the
+        very best of what our cinema chain has to offer in terms of movie viewing experience.
+        <br>
+        <br>
+        This brand new Elements cinema - PREMIERE, will soon be greeting our discerning audiences with a unique new look
+        and ambience. So we advise everyone to stay tuned with us for any updates about our exciting new location!
+        <br>
+        <br>
+        After first being established in the 1950s, Broadway Circuit has steadily developed into the largest cinema
+        circuit in Hong Kong through the decades. Reaching another milestone in our storied history in March 2019, our
+        circuit will have an operation that consists of a total of 14 cinemas, providing 82 screens and approximately
+        12,000 comfortable seating in our city.
+        <br>
+        <br>
+        Broadway Circuit currently comprises of 4 brands tailormade for guests of different segments, including the
+        stylish “Broadway” and “My Cinema”, the premium “PALACE” and of course, the brand new “PREMIERE” as well as the
+        cultural and lifestyle hub “MOViE MOViE”. To provide the best movie experience, all our cinemas are equipped
+        with the latest technologies, such as the best audio-visual equipment and screening environment, as part of our
+        quest to continually provide the best cinematic experience for every single visitor that walks into our cinema.
+        At Broadway Circuit, we live movies and view quality as a way of life. Therefore, we take every effort to ensure
+        that our state-of-the-art cinemas touch you with their charm and uniqueness. Our latest location - the PREMIERE,
+        encapsulates our philosophy and allows us to expand our reach to more movie fanatics in Hong Kong.
+    </div>
+    <footer class="mojFooter">
+        <font face="Roboto Condensed" size="4">
+            <center>
+                <div class="container">
+                    <div class="bottom-footer">
+                        <div class="col-md-12">
+                            <ul class="footer-nav list-unstyled list-inline">
+                                <h4>Follow Us</h4>
+                                <a href="https://www.facebook.com/page.Broadway.PALACE.AMC"> <i
+                                        class="fa fa-facebook-square fa-2x"></i></a>
+                                <a href="https://www.youtube.com/user/BwayPalaceAmc"> <i
+                                        class="fa fa-youtube-play fa-2x"></i></a>
+                                <a href="https://www.instagram.com/broadway.palace.amc/"> <i
+                                        class="fa fa-instagram fa-2x"></i></a>
+                                <br>
+                                <br>
+                                <h4>Mobile Apps</h4>
+                                <a href="https://play.google.com/store/apps/details?id=gd.com.client.broadway&feature=search_result&hl=en">
+                                    <i class="fa fa-android fa-2x"></i></a>
+                                <a href="https://itunes.apple.com/hk/app/ticketing-broadway-palace/id403690922?mt=8"> <i
+                                        class="fa fa-apple fa-2x"></i></a>
+                            </ul>
+                            <li><a href="advertisewithus.html">Advertise With Us</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2019 Cinema.com.hk Limited.</p>
+                </div>
+        </font> </center>
+    </footer>
+</div>
+{% endblock %}
