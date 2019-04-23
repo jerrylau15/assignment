@@ -1,8 +1,8 @@
 from flask_appbuilder import ModelView
 from flask_appbuilder.fieldwidgets import Select2Widget
 from flask_appbuilder.models.sqla.interface import SQLAInterface
-from .models import Employee, Department, Function, EmployeeHistory, Benefit, MenuItem, MenuCategory, News, \
-    NewsCategory, Contact, ContactGroup, EventGroup, Movie
+from .models import Employee, Department, Function, EmployeeHistory, Benefit, Contact, ContactGroup, EventGroup, Movie, \
+    JoinUs
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from app import appbuilder, db
 from flask_appbuilder.baseviews import expose, BaseView
@@ -47,26 +47,6 @@ class BenefitView(ModelView):
     edit_columns = ['name']
     show_columns = ['name']
     list_columns = ['name']
-
-
-class MenuItemView(ModelView):
-    datamodel = SQLAInterface(MenuItem)
-    list_columns = ['id', 'name', 'link', 'menu_category_id']
-
-
-class MenuCategoryView(ModelView):
-    datamodel = SQLAInterface(MenuCategory)
-    list_columns = ['id', 'name']
-
-
-class NewsView(ModelView):
-    datamodel = SQLAInterface(News)
-    list_columns = ['id', 'title', 'content', 'date', 'newsCat_id']
-
-
-class NewsCategoryView(ModelView):
-    datamodel = SQLAInterface(NewsCategory)
-    list_columns = ['id', 'name']
 
 
 class NewsPageView(BaseView):
@@ -170,17 +150,7 @@ class CinemasPageView(BaseView):
 class ContactModelView(ModelView):
     datamodel = SQLAInterface(Contact)
     label_columns = {'name': 'Name', 'contact_group': 'Contact group'}
-    list_columns = ['name', 'mobile', 'birthday', 'contact_group']
-    show_fieldsets = [
-        (
-            'Summary',
-            {'fields': ['name', 'address', 'contact_group']}
-        ),
-        (
-            'Personal Info',
-            {'fields': ['birthday', 'mobile'], 'expanded': False}
-        ),
-    ]
+    list_columns = ['name', 'hotline', 'address']
 
 
 class GroupModelView(ModelView):
@@ -202,11 +172,12 @@ class EventGroupModelView(ModelView):
     related_views = [MovieModelView]
 
 
-db.create_all()
+class JoinUsModelView(ModelView):
+    datamodel = SQLAInterface(JoinUs)
+    list_columns = ['id', 'job', 'job_description', 'requirments', 'Benefits', 'remark']
 
-""" Page View """
-appbuilder.add_view(NewsPageView, 'Local News', category="News")
-appbuilder.add_link("Global News", href="/newspageview/global_news/", category="News")
+
+db.create_all()
 
 """ Cinemas Page View """
 appbuilder.add_view(CinemasPageView, 'MOViE MOViE Cityplaza', icon="fa fa-map-marker", category="Cinemas",
@@ -228,13 +199,6 @@ appbuilder.add_link("TSUEN WAN", icon="fa fa-map-marker", href="/cinemaspageview
 appbuilder.add_link("KINGSWOOD GINZA", icon="fa fa-map-marker", href="/cinemaspageview/KINGSWOOD_GINZA/",
                     category="Cinemas")
 
-""" Custom Views """
-appbuilder.add_view(MenuItemView, "MenuItem", icon="fa-folder-open-o", category="Admin",
-                    category_icon='fa fa-users')
-appbuilder.add_view(MenuCategoryView, "MenuCategory", icon="fa-folder-open-o", category="Admin")
-appbuilder.add_view(NewsView, "News", icon="fa-folder-open-o", category="Admin")
-appbuilder.add_view(NewsCategoryView, "NewsCategory", icon="fa-folder-open-o", category="Admin")
-
 """ Contact """
 appbuilder.add_view(GroupModelView, "List Groups", icon='fa-address-book-o', category='Contacts',
                     category_icon='fa-envelope')
@@ -244,3 +208,6 @@ appbuilder.add_view(ContactModelView, 'List Contacts', icon='fa-address-card-o',
 appbuilder.add_view(EventGroupModelView, "Event Group", icon='fa fa-film', category='Movie',
                     category_icon='fa fa-film')
 appbuilder.add_view(MovieModelView, "Movie list", icon='fa fa-film', category='Movie')
+
+""" JoinUs """
+appbuilder.add_view(JoinUsModelView, "Join Us", icon="fa fa-users", category='Join Us', category_icon='fa fa-users')

@@ -2,11 +2,9 @@ import datetime
 from sqlalchemy import Table, Column, Integer, String, ForeignKey, Date, Text
 from sqlalchemy.orm import relationship
 from flask_appbuilder import Model
-from flask_appbuilder.models.mixins import AuditMixin, FileColumn, ImageColumn
+from flask_appbuilder.models.mixins import ImageColumn
 from flask_appbuilder.filemanager import ImageManager
-from flask import Markup, url_for, g
-from flask_appbuilder.models.decorators import renders
-from flask_appbuilder.models.sqla.filters import FilterStartsWith, FilterEqualFunction
+from flask import Markup, url_for
 
 
 class Gender(Model):
@@ -89,37 +87,6 @@ class Employee(Model):
         return self.full_name
 
 
-class MenuItem(Model):
-    __tablename__ = 'menu_item'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(50), nullable=False)
-    link = Column(String(150), nullable=False)
-    menu_category_id = Column(Integer, ForeignKey('menu_category.id'), nullable=False)
-    menu_category = relationship("MenuCategory")
-
-
-class MenuCategory(Model):
-    __tablename__ = 'menu_category'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(50), nullable=False)
-
-
-class News(Model):
-    __tablename__ = 'news'
-    id = Column(Integer, primary_key=True)
-    title = Column(String(50), nullable=False)
-    content = Column(String(500), nullable=False)
-    date = Column(Date, default=datetime.date.today(), nullable=True)
-    newsCat_id = Column(Integer, ForeignKey('news_category.id'), nullable=False)
-    newsCat = relationship("NewsCategory")
-
-
-class NewsCategory(Model):
-    __tablename__ = 'news_category'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(50), nullable=False)
-
-
 class ContactGroup(Model):
     id = Column(Integer, primary_key=True)
     name = Column(String(50), unique=True, nullable=False)
@@ -132,8 +99,7 @@ class Contact(Model):
     id = Column(Integer, primary_key=True)
     name = Column(String(150), unique=True, nullable=False)
     address = Column(String(564))
-    birthday = Column(Date)
-    mobile = Column(String(20))
+    hotline = Column(String(100))
     contact_group_id = Column(Integer, ForeignKey('contact_group.id'))
     contact_group = relationship("ContactGroup")
 
@@ -185,6 +151,18 @@ class EventGroup(Model):
     id = Column(Integer, primary_key=True)
     Type = Column(String(100), nullable=False)
     name = Column(String(150), unique=True, nullable=False)
+
+    def __repr__(self):
+        return self.name
+
+
+class JoinUs(Model):
+    id = Column(Integer, primary_key=True)
+    job = Column(String(100), unique=True, nullable=False)
+    job_description = Column(Text())
+    requirments = Column(Text())
+    Benefits = Column(Text())
+    remark = Column(String(400))
 
     def __repr__(self):
         return self.name
